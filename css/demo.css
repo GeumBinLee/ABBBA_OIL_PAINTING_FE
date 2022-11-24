@@ -374,9 +374,7 @@ a:focus {
 	text-transform: lowercase;
 }
 
-.menu__item--current {
-	font-weight: bold;
-}
+
 
 .menu__link {
 	color: #fff;
