@@ -11,21 +11,33 @@
 
 <body>
     <div id="box">
-        <h1>Convert Image</h1>
+        <h1>CONVERT YOUR IMAGE</h1>
         <div id="before_after">
             <div id="input">
-                <img
-                    src="https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg">
+                <div>
+                    <button onclick="prev();">&lt;</button>
+
+                    <img id="slide" src="https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg">
+                    <button onclick="next();">&gt;</button>
+                </div>
+
                 <input type="file" id="input_image" accept="image/*" required>
-                <button id="upload_image">UPLOAD</button>
+                <div class="buttons">
+                    <button id="spider"><img src="https://cdn-icons-png.flaticon.com/512/1090/1090806.png"></button>
+                    <button id="witch"><img src="https://cdn-icons-png.flaticon.com/512/3684/3684842.png"></button>
+                    <button id="doctor"><img src="https://cdn-icons-png.flaticon.com/512/3426/3426250.png"></button>
+                    <img id="upload_image" src="https://cdn-icons-png.flaticon.com/512/8924/8924913.png"></img>
+                </div>
+
             </div>
             <div id="output">
                 <img
                     src="https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg">
-                <button>DOWNLOAD</button>
+                <button id="download">DOWNLOAD</button>
             </div>
         </div>
+        <button class="convert">CONVERT</button>
     </div>
 </body>
-
+<script src="js/convert_picture.js"></script>
 </html>

@@ -1,52 +1,145 @@
-body{
-    background-color : rgb(190, 74, 74);
+body {
+    background-size : 100vw 100vh;
+    background-position : center;
+    background-image: linear-gradient(0deg, rgba(148, 26, 26, 0.8), rgba(6, 6, 6, 0.8)), url('https://bosslevelgamer.com/cdn-cgi/image/width=150,height=150,quality=80,format=auto,onerror=redirect,metadata=none/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2021/11/Marvels-Avengers-Game-with-Spider-Man.jpg');
 }
 
-#box{
-    background-color: white;
+#box {
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    width : 80vw;
-    height : 90vh;
-    margin : auto;
-    padding : 30px;
+    width: 70vw;
+    height: 80vh;
+    margin: auto;
+    padding: 30px;
 }
 
 #box h1 {
     text-align: center;
-    color :rgb(74, 105, 190);
-    margin: 8vh auto; 
+    font-weight: border;
+    color: rgb(74, 105, 190);
+    margin: 5vh auto 0 auto;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #before_after {
     display: flex;
     justify-content: center;
-    margin : auto;
+    margin: auto;
+    height: 70%;
 }
 
-#input img, #output img {
+#input {
+    margin: auto;
+}
+
+#input div:nth-child(1) img,
+#output img {
     object-fit: cover;
     aspect-ratio: 1/1;
-    margin : auto;
-    width : 70%;
-    display : block;
+    margin: auto;
+    width: 60%;
+    display: block;
     border-radius: 15px;
 }
 
-#input img:hover{
-    border : 1px black solid;
+#input button {
+    width: 15%;
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
-#input, #output{
-    width :50%;
+#input button img {
+    width: 100%;
+}
+
+#input button:hover {
+    cursor: pointer;
+    color: rgb(190, 74, 74);
 }
 
 
-#input input{
-    display : none;
+
+#input,
+#output {
+    width: 50%;
 }
 
-#output button, #input button {
-    margin : auto;
+#output {
+    margin: auto;
+}
+
+
+#input input {
+    display: none;
+}
+
+#output button {
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    font-size: 100%;
     display: block;
-    margin-top : 20px;
+    margin-top: 30px;
+    font-weight: bord;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#output button:hover {
+    background-color: rgb(190, 74, 74);
+    color: white;
+    border: 1px solid rgb(190, 74, 74);
+    cursor: pointer;
+}
+
+#upload_image {
+    width: 10%;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+
+}
+
+.buttons {
+    display: flex;
+    width: 60%;
+    margin: 25px auto 0 auto;
+    justify-content: space-evenly;
+}
+
+#input div:nth-child(1) {
+    display: flex;
+}
+
+/* .buttons button{
+    border : none;
+    background-color : white;
+    height: 25%;
+    border-radius: 50%;
+} */
+
+.convert {
+    display: block;
+    margin: 3vh auto 0 auto;
+    font-size: 100%;
+    font-weight: bord;
+    background-color: white;
+    border: 1.5px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    width: 20vw;
+    height: 4vh;
+}
+
+.convert:hover {
+    background-color: rgb(190, 74, 74);
+    color: white;
+    border: 1px solid rgb(190, 74, 74);
+    cursor: pointer;
+
 }
