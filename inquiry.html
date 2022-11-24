@@ -9,18 +9,31 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
+
     <div class="modal">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-            <h1>문의하기</h1>
-            <button>x</button>
+        <div class="modal_body">
+            <span class =nav_1>
+                문의할 내용을 적어주세요
+               
+            </span>
+            <h1 type="button" class="modal_close"></h1>
+            <form>
+            <div class="input_set">
+                <label class="input_set_label" >제목</label>
+                <input type="text" id="title" /><br />
+                <label class="input_set_label">내용</label><br />
+                <textarea cols="50" rows="7" id="content"></textarea><br />
+            </div>
+            <button type="submit" onclick="inquirypost()">작성</button>
         </div>
+        </form>
+        
     </div>
+    
     <div class="first_box">
         <div class="bar">
         <span class="bar_1" >Q&A</span>
-        <button all:unset; type="button" class="btn btn-dark" onclick="to_write_article();">문의하기</button>
-       
+        <button  class="btn_btn-dark">문의하기</button>
         </div>
         <div>
         <table class="table">

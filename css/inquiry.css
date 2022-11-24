@@ -1,17 +1,57 @@
+body{
+    background-image:url('https://wallpapers.com/images/high/doctor-strange-emerge-from-portal-los1yxtqpk57vkqa.webp'),url('https://wallpapers.com/images/high/wanda-maximoff-avengers-endgame-t6oopd5b5l4jyyny.webp'),url('https://wallpapers.com/images/high/snapped-spider-man-4k-marvel-iphone-crmveatpe8uf5ptp.webp');
+    background-size:35% 115%, 33% 114%, 33% 114%;
+    background-position:0px 0px, 52% 0px, 100% 0px;
+    background-repeat:no-repeat;
+    
+}
+.btn_btn-dark{
+background: #d1e5f0ec;
+    border-color: #000000;
+    color: black;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    outline: none;
+    width: 10%;
+    padding: 0;
+    margin-top: 10px;
+    margin: 5px;
+    cursor: pointer
+}
+.bbtn_btn-dark{
+    background: #d1e5f0ec;
+        border-color: #000000;
+        color: black;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        outline: none;
+        width: 40%;
+        margin-left: 15px;
+        cursor: pointer
+    }
 .first_box{
     
     margin:50px auto auto auto;
-   
-    width:40%;
+    background-color: rgba(205, 195, 200, 0.941);
+    width: 40%;
     height:800px;
-    border: 2px solid black;
+    border: 2px solid rgb(68, 1, 1);
     align-items: row;
+    border-radius: 15px;
     }
 .bar{
     width : 100%;
     text-align: center;
     align-items: center;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 .bar_1{
     padding-right: 77%;
@@ -20,21 +60,72 @@
 }
 .table{
     align-items: center;
-    background-color:beige;
+    background-color:rgba(205, 195, 200, 0.263);
 }
 
+.inquiry_modal,
 .modal{
     
-    background-color: aqua;
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.4);
 
     
 }
-.modal_overlay{
-    text-align: center;
-    background-color: blue;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+.modal.show {
+    display: block;
+  }
+
+.modal_body {
+position: absolute;
+top: 50%;
+left: 50%;
+
+width: 600px;
+height: 800px;
+
+padding: 40px;
+
+text-align: center;
+
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+transform: translateX(-50%) translateY(-50%);
+}
+
+.nav_1{
+   
+    font-size: 27px;
+}
+.input_set{
+text-align: left;
+}
+
+.modal_close:after{content:"\00d7"; font-size:40pt;line-height:0px;
+    
+}
+.modal_close {
+   
+    position:relative;
+    float:right;
+    display:absolute;
+    width:50px;
+    height:50px;
+    text-align:center;
+    left: 30px;
+    bottom: 30px;
+}
+    
+.input_set_label{
+    margin-top:30px;
 }
