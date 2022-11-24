@@ -1,0 +1,52 @@
+body{
+    background-color : rgb(190, 74, 74);
+}
+
+#box{
+    background-color: white;
+    border-radius: 20px;
+    width : 80vw;
+    height : 90vh;
+    margin : auto;
+    padding : 30px;
+}
+
+#box h1 {
+    text-align: center;
+    color :rgb(74, 105, 190);
+    margin: 8vh auto; 
+}
+
+#before_after {
+    display: flex;
+    justify-content: center;
+    margin : auto;
+}
+
+#input img, #output img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    margin : auto;
+    width : 70%;
+    display : block;
+    border-radius: 15px;
+}
+
+#input img:hover{
+    border : 1px black solid;
+}
+
+#input, #output{
+    width :50%;
+}
+
+
+#input input{
+    display : none;
+}
+
+#output button, #input button {
+    margin : auto;
+    display: block;
+    margin-top : 20px;
+}
