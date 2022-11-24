@@ -1,0 +1,40 @@
+.first_box{
+    
+    margin:50px auto auto auto;
+   
+    width:40%;
+    height:800px;
+    border: 2px solid black;
+    align-items: row;
+    }
+.bar{
+    width : 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.bar_1{
+    padding-right: 77%;
+    font-size: 23px;
+
+}
+.table{
+    align-items: center;
+    background-color:beige;
+}
+
+.modal{
+    
+    background-color: aqua;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    
+}
+.modal_overlay{
+    text-align: center;
+    background-color: blue;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
