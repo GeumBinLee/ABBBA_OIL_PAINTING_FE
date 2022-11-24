@@ -64,7 +64,7 @@ async function handleLogin(){
   localStorage.setItem("refresh", response_json.refresh);
   if (response.status === 200){
       alert("로그인이 완료되었습니다!");
-      location.href="main.html"
+      location.href="index.html"
   }        
   else{
       Alert.innerText = "이메일 또는 비밀번호를 확인해주세요"
@@ -78,4 +78,13 @@ async function handleLogin(){
   localStorage.setItem("payload", jsonPayload);
 
   
+}
+
+
+function handleLogout() {
+    localStorage.removeItem("access")
+    localStorage.removeItem("refresh")
+    localStorage.removeItem("payload")      
+    alert("로그아웃이 완료되었습니다!")
+    location.href="signup.html";
 }
