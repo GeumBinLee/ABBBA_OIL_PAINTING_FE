@@ -25,8 +25,9 @@ window.onload = () => {
 
 
 
-
+const exampleImage = ["https://media.istockphoto.com/id/487474326/vector/low-polygon-llion-geometric-pattern-explode-vector-illustratio.jpg?s=612x612&w=0&k=20&c=RgB7yFaqxS1Rp7_vV0_4QGpyQbJ5TqXvoTvjAo--9Vw=","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqTgeaO4-nl32GMEPrZ5k4XJXR2YugnX6jw&usqp=CAU","https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTBfMTI5/MDAxNTc1OTQ2Nzc1OTIy.ItplAsigh5YToRGRCStcVIDqYKYSHncaWFUYu58BIr0g.tGzqWl-PWpmGkqCuMBAUgEBc2oh_-v1udYhDEx9DjP4g.JPEG.enaeng1/F17-1.JPG?type=w800"]
 const slide = document.querySelector("#slide");
+const second_slide = document.querySelector("#second_slide");
 const imgList = ["https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg",
     "https://wallpapercave.com/wp/wp9669554.jpg", "http://ojsfile.ohmynews.com/BIG_IMG_FILE/2016/1101/IE002043078_BIG.jpg"];
 let i = 0;
@@ -36,31 +37,40 @@ const doctor = document.querySelector("#doctor")
 
 spider.onclick = function () {
     slide.src = imgList[0]
+    second_slide.src = exampleImage[0]
 }
 witch.onclick = function () {
     slide.src = imgList[1]
+    second_slide.src = exampleImage[1]
 }
 doctor.onclick = function () {
     slide.src = imgList[2]
+    second_slide.src = exampleImage[1]
 }
 
 function prev() {
     i--;
     slide.src = imgList[i];
+    second_slide.src = exampleImage[i];
     if (i < 0) {
         i = imgList.length - 1;
         slide.src = imgList[i];
+        second_slide.src = exampleImage[i];
     }
 }
 
 function next() {
     i++;
     slide.src = imgList[i];
+    second_slide.src = exampleImage[i];
     if (i >= imgList.length) {
         i = 0;
         slide.src = imgList[i]
+        second_slide.src = exampleImage[i]
     }
 }
+
+
 
 function download() {
 
