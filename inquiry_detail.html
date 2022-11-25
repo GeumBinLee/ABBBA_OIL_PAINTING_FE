@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>btn
 <html lang="en">
 
 <head>
@@ -13,12 +13,12 @@
 
     <title>inquiry_detail</title>
     <link rel="stylesheet" href="css/inquiry_detail.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 </head>
 
 <body>
-
+    
     <section id="container">
-
         <div class="post_form">
             <a href="inquiry.html">
                 <span id="home_button" class="material-symbols-rounded">home</span>
@@ -39,13 +39,32 @@
                         <input class="comment_delete_btn" type="button" onclick="create_comment()" value="등록">
                     </p>
                 <div class="buttons" id="buttons">
+                    <input class="submit_btn" type="submit" value="문의글 수정"></a>
                     <input class="submit_btn" type="submit" onclick="delete_post(article_id)" value="문의글 삭제"></a>
                 </div>
             </div>
         </div>
     </section>
+    
+    <div class="modal">
+        <div class="modal_body">
+            <span class =nav_1>
+                수정할 내용을 입력해주세요
+            </span>
+            <h1 type="button" class="modal_close"></h1>
+            <form>
+            <div class="input_set">
+                <label class="input_set_label" >제목</label>
+                <textarea cols="50" rows="1" id="edit_title"></textarea><br />
+                <label class="input_set_label">내용</label><br />
+                <textarea cols="50" rows="7" id="edit_content"></textarea><br />
+            </div>
+            <button type="submit" onclick="EditPost(article_id)">작성</button>
+            </form>
+        </div>
+    </div>
+   
     <script src="js/inquiry_detail.js"></script>
-
 </body>
 
 </html>

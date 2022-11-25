@@ -1,11 +1,11 @@
 const article_id = localStorage.getItem("article_id");
 
 window.onload = () => {
-    post(article_id)
-    
+    inquiry_detail(article_id)
+    edit_inquiry_get(article_id)
  }
 
- async function post(article_id) {
+ async function inquiry_detail(article_id) {
     const payload = localStorage.getItem("payload");
     const payload_parse = JSON.parse(payload)
     const user_id = payload_parse.user_id
@@ -22,6 +22,8 @@ window.onload = () => {
     response_json = await response.json()
     title.innerText = response_json.title;
     content.innerText = response_json.content;
+   
+
     const comment_set = response_json.comment_set;
 
     if (user_id != response_json.user){
@@ -44,6 +46,8 @@ window.onload = () => {
             delete_button.style.display='none';
           }
 }
+edit_title.innerText = response_json.title;
+edit_content.innerText = response_json.content;
 }
 
 async function delete_comment(id) {
@@ -76,9 +80,9 @@ async function create_comment() {
     window.location.reload()
 }
 
-async function delete_post(id) {
-    post_id = id
-    const response = await fetch(`http://127.0.0.1:8000/inquiries/${post_id}/`,{
+async function delete_post(article_id) {
+    inquiry_id = article_id
+    const response = await fetch(`http://127.0.0.1:8000/inquiries/${inquiry_id}/`,{
         headers:{
             "authorization" : "Bearer " + localStorage.getItem("access")
         },
@@ -87,3 +91,38 @@ async function delete_post(id) {
     })
     location.href = "inquiry.html"
 }
+
+const edit_title = document.getElementById("edit_title")
+const edit_content = document.getElementById("edit_content")
+
+async function EditPost(id) {
+    inquiry_id = article_id
+    const content = document.getElementById("edit_title").value
+    const title = document.getElementById("edit_content").value
+    const response = await fetch(`http://127.0.0.1:8000/inquiries/${inquiry_id}/`,{
+        headers:{
+            'content-type':'application/json',
+            "authorization" : "Bearer " + localStorage.getItem("access")
+        },
+        method:'put',
+        body: JSON.stringify({
+            "title":title,
+            "content":content,
+        })
+    })
+}
+
+
+
+const modal = document.querySelector('.modal');
+const modal_open = document.querySelector('.submit_btn');
+const modal_close = document.querySelector('.modal_close');
+
+modal_open.addEventListener('click', () => {
+    modal.style.display = 'block';
+    });
+    
+modal_close.addEventListener('click', () => {
+     modal.style.display = 'none';
+        });
+    
