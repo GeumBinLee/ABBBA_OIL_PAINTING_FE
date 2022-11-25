@@ -97,17 +97,14 @@ download.onclick = function () {
 }
 
 convert = document.querySelector(".convert")
-convert.onclick = function(){
+convert.onclick = async function(){
     let cls = slide.getAttribute("class");
     cls = cls.toString();
     const picture = document.querySelector("#input_image");
     var formData = new FormData()
     formData.append("picture", picture.files[0])
         formData.append("painter", cls)
-        console.log(cls)
-        console.log(formData)
-        console.log(picture)
-        response = fetch("http://127.0.0.1:8000/painters/convert/",{
+        response = await fetch("http://127.0.0.1:8000/painters/convert/",{
             headers: {
                 "authorization": "Bearer " + localStorage.getItem("access")
             },
@@ -116,7 +113,19 @@ convert.onclick = function(){
             body : formData
         })
         .then(response => response.json())
-        console.log(response)
+
+        const converted_image = await fetch(`http://127.0.0.1:8000/painters/painting/${response.id}/`,{
+            headers : {
+                "authorization": "Bearer " + localStorage.getItem("access")
+            },
+            method : 'GET'
+        })
+        .then(converted_image => converted_image.json())
+
+        
+        console.log(converted_image[0].painting)
+        second_slide.src = "http://127.0.0.1:8000" + converted_image[0].painting
+        
         alert("변환 성공!")
     
 }
