@@ -1,7 +1,5 @@
-body {
-    background-size : 100vw 120vh;
-    background-position : center;
-    background-image: linear-gradient(0deg, rgba(99, 0, 0, 0.691), rgba(6, 6, 6, 0.95)), url('https://bosslevelgamer.com/cdn-cgi/image/width=150,height=150,quality=80,format=auto,onerror=redirect,metadata=none/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2021/11/Marvels-Avengers-Game-with-Spider-Man.jpg');
+body{
+    background-color: rgb(190, 74, 74);
 }
 
 #box {
