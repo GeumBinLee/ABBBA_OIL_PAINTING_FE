@@ -1,13 +1,11 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
+function handleLogout() {
+  localStorage.removeItem("access");
+  localStorage.removeItem("refresh");
+  localStorage.removeItem("payload");
+  alert("로그아웃이 완료되었습니다!");
+  location.href = "signup.html";
+}
+
 (function (window) {
   "use strict";
 
@@ -236,16 +234,16 @@
   function toggleSlide(dir, delay) {
     var slide = DOM.slides[currentRoom],
       // Slide's name.
-      name = slide.querySelector(".slide__name"),
+      //   name = slide.querySelector(".slide__name"),
       // Slide's title and date elements.
       title = slide.querySelector(".slide__title"),
-      date = slide.querySelector(".slide__date");
+      //   date = slide.querySelector(".slide__date");
 
-    delay = delay !== undefined ? delay : 0;
+      delay = delay !== undefined ? delay : 0;
 
-    anime.remove([name, title, date]);
+    anime.remove([title]);
     var animeOpts = {
-      targets: [name, title, date],
+      targets: [title],
       duration: dir === "in" ? 400 : 400,
       //delay: 0,//dir === 'in' ? 150 : 0,
       delay: function (t, i, c) {
@@ -269,6 +267,7 @@
         slide.classList.remove("slide--current");
       };
     }
+
     anime(animeOpts);
   }
 
@@ -299,11 +298,6 @@
     } else {
       currentRoom = currentRoom > 0 ? currentRoom - 1 : totalRooms - 1;
     }
-
-    // Position the next room.
-    var nextRoom = DOM.rooms[currentRoom];
-    nextRoom.style.transform = "translate3d(" + (dir === "next" ? 100 : -100) + "%,0,0) translate3d(" + (dir === "next" ? 1 : -1) + "px,0,0)";
-    nextRoom.style.opacity = 1;
 
     // Move back.
     move({ transition: roomTransition, transform: resetTransform })
@@ -537,18 +531,6 @@
       initTilt();
     });
 
-    // Hide info text and animate photos into the walls.
-    var photos = DOM.rooms[currentRoom].querySelectorAll(".room__img");
-    anime.remove(photos);
-    anime({
-      targets: photos,
-      duration: 400,
-      easing: [0.3, 1, 0.3, 1],
-      translateY: 0,
-      rotateX: 0,
-      rotateZ: 0,
-      translateZ: 10,
-    });
     // Animate info text and overlay.
     anime.remove([DOM.infoOverlay, DOM.infoText]);
     var animeInfoOpts = {
