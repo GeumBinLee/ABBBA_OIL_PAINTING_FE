@@ -25,7 +25,7 @@ window.onload = () => {
 
 
 
-const exampleImage = ["https://media.istockphoto.com/id/487474326/vector/low-polygon-llion-geometric-pattern-explode-vector-illustratio.jpg?s=612x612&w=0&k=20&c=RgB7yFaqxS1Rp7_vV0_4QGpyQbJ5TqXvoTvjAo--9Vw=","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqTgeaO4-nl32GMEPrZ5k4XJXR2YugnX6jw&usqp=CAU","https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTBfMTI5/MDAxNTc1OTQ2Nzc1OTIy.ItplAsigh5YToRGRCStcVIDqYKYSHncaWFUYu58BIr0g.tGzqWl-PWpmGkqCuMBAUgEBc2oh_-v1udYhDEx9DjP4g.JPEG.enaeng1/F17-1.JPG?type=w800"]
+const exampleImage = ["https://user-images.githubusercontent.com/18550082/204178192-37cdf10d-fb56-4344-af30-4a6a6ae4094a.jpeg","https://user-images.githubusercontent.com/18550082/204178225-c9cb1d9c-6102-4569-8cab-1a88b2700724.png","https://user-images.githubusercontent.com/18550082/204178234-5251d81a-0a81-469e-b395-c0a690111445.jpg"]
 const slide = document.querySelector("#slide");
 const second_slide = document.querySelector("#second_slide");
 const imgList = ["https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg",
@@ -77,24 +77,27 @@ function next() {
 }
 
 
-
-function download() {
-
+function to_profile() {
+    location.href = "profile.html"
 }
 
-download = document.getElementById("download")
-download.onclick = function () {
-    // fetch(`http://127.0.0.1:8000/painters/download/${painting.id}`,{
-    response = fetch("http://127.0.0.1:8000/painters/download/2", {
-        headers: {
-            "authorization": "Bearer " + localStorage.getItem("access")
-        },
-        method: 'GET'
-    })
-        .then(response => response.json())
-    console.log(response)
-    alert("다운 완료!")
-}
+//function download() {
+
+//}
+
+//download = document.getElementById("download")
+//download.onclick = function () {
+//    // fetch(`http://127.0.0.1:8000/painters/download/${painting.id}`,{
+//    response = fetch("http://127.0.0.1:8000/painters/download/2", {
+//        headers: {
+//            "authorization": "Bearer " + localStorage.getItem("access")
+//        },
+//        method: 'GET'
+//    })
+//        .then(response => response.json())
+//    console.log(response)
+//    alert("다운 완료!")
+//}
 
 convert = document.querySelector(".convert")
 convert.onclick = async function(){
