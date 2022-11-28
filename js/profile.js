@@ -13,15 +13,9 @@ jQuery(document).ready(function ($) {
   $("#navbar-menu")
     .find("a[href*=#]:not([href=#])")
     .click(function () {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
+      if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
         var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
+        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
         if (target.length) {
           $("html,body").animate(
             {
@@ -30,10 +24,7 @@ jQuery(document).ready(function ($) {
             1000
           );
           if ($(".navbar-toggle").css("display") != "none") {
-            $(this)
-              .parents(".container")
-              .find(".navbar-toggle")
-              .trigger("click");
+            $(this).parents(".container").find(".navbar-toggle").trigger("click");
           }
           return false;
         }
@@ -235,31 +226,11 @@ response.results.forEach(element => {
   
 // }
 
+
 function handleLogout() {
   localStorage.removeItem("access");
   localStorage.removeItem("refresh");
   localStorage.removeItem("payload");
   alert("로그아웃이 완료되었습니다!");
   location.href = "signup.html";
-}
-
-function myFunction(id) {
-  // Declare variables
-  var filter, ul, li, a, i, txtValue;
-  id = document.getElementById('myInput');
-  filter = id.value.toUpperCase();
-  ul = document.getElementsByClassName("grid");
-  li = ul.getElementsByTagName('li');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
 }
