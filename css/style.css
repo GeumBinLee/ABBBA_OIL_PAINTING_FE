@@ -38,7 +38,7 @@ body {
 
 /*------------------------------------------------------------------*/
 /*   IE10 in Windows 8 and Windows Phone 8 Bug fix
-   /*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
 
 @-webkit-viewport {
   width: device-width;
@@ -57,8 +57,8 @@ body {
 }
 
 /*
-       Page Content
-   ------------------------------------------*/
+    Page Content
+------------------------------------------*/
 
 .page-content,
 section {
@@ -66,15 +66,15 @@ section {
 }
 
 /*
-       On Scroll Animations 
-   ------------------------------------------*/
+    On Scroll Animations 
+------------------------------------------*/
 
 /*.animated { visibility: hidden; }
-   .visible { visibility: visible; }*/
+.visible { visibility: visible; }*/
 
 /*
-       Spacing & Alignment 
-   ------------------------------------------*/
+    Spacing & Alignment 
+------------------------------------------*/
 
 .roomy-100 {
   padding-top: 100px;
@@ -249,8 +249,7 @@ select:-webkit-autofill {
 .form-control:focus {
   border-color: #bcefeb;
   outline: 0;
-  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075),
-    0 0 0px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(102, 175, 233, 0.6);
 }
 
 h1,
@@ -338,8 +337,8 @@ p:last-child {
 }
 
 /*
-   Section
-   */
+Section
+*/
 
 .parallax-section {
   max-width: 100%;
@@ -379,8 +378,8 @@ ul {
 }
 
 /*
-   Separator
-   */
+Separator
+*/
 
 .separator {
   width: 30px;
@@ -390,8 +389,8 @@ ul {
 }
 
 /*
-   Button
-   */
+Button
+*/
 .btn {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
@@ -425,11 +424,11 @@ ul {
 }
 
 /*
-   socail icon
-   --------------------------------*/
+socail icon
+--------------------------------*/
 /*
-   Extra height css
-   */
+Extra height css
+*/
 .m-0 {
   margin: 0 !important;
 }
@@ -708,15 +707,15 @@ textarea::-ms-input-placeholder {
 
 /*for image bg*/
 /*.img-bg{
-     background: url(../images/home-msg.jpg) no-repeat center top fixed;
-     background-size
-     -moz-background-size: cover;
-     -webkit-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     width: 100%;
-     overflow: hidden;
-   }*/
+  background: url(../images/home-msg.jpg) no-repeat center top fixed;
+  background-size
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}*/
 
 .transform_scal_rotate:hover img {
   -webkit-transform: scale(1.1) rotate(4deg);
@@ -903,8 +902,8 @@ textarea::-ms-input-placeholder {
 /*End off Preloader*/
 
 /*
-   Nav Menu style
-   ==================*/
+Nav Menu style
+==================*/
 
 .navbar-brand {
   padding: 30px 15px;
@@ -920,8 +919,8 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*
-   Home Section style
-   ==================*/
+Home Section style
+==================*/
 
 .home {
   background: url(../images/home-bg.jpg) no-repeat top center;
@@ -943,7 +942,7 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*scrooldown
-   -------------------*/
+-------------------*/
 
 @-webkit-keyframes scroll-ani {
   0% {
@@ -1052,8 +1051,8 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*
-   Featured section style
-   ========================*/
+Featured section style
+========================*/
 .about {
 }
 .main_about h1 {
@@ -1075,8 +1074,8 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*
-   Featured section style
-   ========================*/
+Featured section style
+========================*/
 .features_item2_area {
   position: relative;
   width: 100%;
@@ -1118,7 +1117,7 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*service Section
-   ========================*/
+========================*/
 
 .slid_shap {
   height: 40px;
@@ -1169,8 +1168,8 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*
-   tems Section style
-   =====================*/
+tems Section style
+=====================*/
 .teams_item {
 }
 .teams_item h4 {
@@ -1216,7 +1215,7 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*Choose Section
-   ======================*/
+======================*/
 .choose_mac {
   background: url(../images/choose-mokup.png) no-repeat;
   background-size: cover;
@@ -1249,8 +1248,8 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*========================================================================
-                   Portfolio Section Style
-   ==========================================================================*/
+                Portfolio Section Style
+==========================================================================*/
 .portfolio {
   overflow: hidden;
 }
@@ -1319,9 +1318,9 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*.grid-item > * {
-       margin: 0;
-       padding: 0;
-   }*/
+    margin: 0;
+    padding: 0;
+}*/
 
 .main-portfolio .grid-item img {
   width: 100%;
@@ -1357,7 +1356,7 @@ nav.navbar.bootsnav.no-background.white ul.nav > li.active > a {
 }
 
 /*Test Section
-   ======================*/
+======================*/
 .main_test {
   width: 100%;
   display: block;
