@@ -1,3 +1,4 @@
+
 "use strict";
 jQuery(document).ready(function ($) {
   //for Preloader
@@ -30,16 +31,7 @@ jQuery(document).ready(function ($) {
       }
     });
 
-  /*---------------------------------------------*
-     * WOW
-     ---------------------------------------------*/
 
-  var wow = new WOW({
-    mobile: false, // trigger animations on mobile devices (default is true)
-  });
-  wow.init();
-
-  // magnificPopup
 
   $(".popup-img").magnificPopup({
     type: "image",
@@ -157,6 +149,83 @@ $(function () {
     event.preventDefault();
   });
 });
+
+
+ 
+window.addEventListener('DOMContentLoaded', function()
+{
+  GetProfile()
+});
+
+async function GetProfile(){
+ 
+  const response = await fetch ('http://127.0.0.1:8000/users/profile/?page=1',{
+      headers : {
+          "authorization" : "Bearer " + localStorage.getItem("access")
+      },
+      method : 'GET'
+  })
+.then (response=>response.json())
+console.log(response);
+console.log(response.next)
+
+
+const prevprev = document.getElementById("prevprev")
+const nextnext = document.getElementById("nextnext")
+prevprev.onclick = `location.href=${response.previous}`
+nextnext.onclick = `location.href=${response.next}`
+
+response.results.forEach(element => {
+  console.log(response)
+
+  const div_box = document.querySelector("#container_box")
+
+  const image = document.createElement("img")
+  image.src = "http://127.0.0.1:8000"+element.painting
+  div_box.appendChild(image)
+
+
+
+
+  // all.onclick = function () {
+  //   const image = document.createElement("img")
+  //   image.src = "http://127.0.0.1:8000"+element.painting
+  //   div_box.appendChild(image)
+  // }
+  
+})
+
+
+
+
+  // for(let i = response.results.length -1; i >= 0; i--){
+    
+    
+  
+    // const abc = document.querySelector("#abc")
+    // abc.src = image_url
+    // const feed = document.getElementById("grid")
+    // const Div = document.createElement("div")
+    // $(Div).addClass('grid-item');
+    // $(Div).addClass(`${response.results[i].painter}`)
+    // console.log(image_url)
+   
+  //   Div.innerHTML=
+  //   `<img alt="" src="${image_url}" />
+  //    <div class="grid_hover_area text-center">
+  //     <div class="girid_hover_text m-top-50">
+  //       <h4 class="text-white">${response.results[i].painter}</h4>
+  //       <p class="text-white">-${create_at}-</p>
+  //       <a href="images/porfolio-1.jpg" class="btn btn-primary popup-img">다운로드</a>
+  //     </div>
+  //   </div>
+  // </div>
+  // `;
+  // feed.appendChild(Div)
+  // }
+  
+// }
+
 
 function handleLogout() {
   localStorage.removeItem("access");

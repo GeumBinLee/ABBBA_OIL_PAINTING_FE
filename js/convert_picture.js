@@ -25,6 +25,7 @@ window.onload = () => {
 
 
 
+
 const exampleImage = ["https://user-images.githubusercontent.com/18550082/204178192-37cdf10d-fb56-4344-af30-4a6a6ae4094a.jpeg","https://user-images.githubusercontent.com/18550082/204178225-c9cb1d9c-6102-4569-8cab-1a88b2700724.png","https://user-images.githubusercontent.com/18550082/204178234-5251d81a-0a81-469e-b395-c0a690111445.jpg"]
 const slide = document.querySelector("#slide");
 const second_slide = document.querySelector("#second_slide");
