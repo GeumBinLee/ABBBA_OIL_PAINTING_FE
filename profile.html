@@ -217,7 +217,7 @@
                   <div class="service_content">
                     <p>닥터 스트레인지, 스파이더맨, 스칼렛 위치의 그림체로 사진을 변환해보세요</p>
 
-                    <a href="" class="btn btn-default m-top-40">사진변환하러가기</a>
+                    <a href="convert_picture.html" class="btn btn-default m-top-40">사진변환하러가기</a>
                   </div>
                 </div>
               </div>
@@ -233,41 +233,24 @@
         <!-- Portfolio container-->
         <div class="container">
           <div class="row">
-            <div class="main-portfolio roomy-80">
-              <div class="col-md-4">
-                <div class="head_title text-left sm-text-center wow fadeInDown">
+              <div>
+                <div class="head_title sm-text-center wow fadeInDown">
                   <h2 class="text-uppercase">My <strong>Hero</strong></h2>
                 </div>
               </div>
-
-              <div class="col-md-8">
-                <div class="filters-button-group text-right sm-text-center">
-                  <button class="btn button is-checked" data-filter="*">all</button>
-                  <button class="btn button" data-filter=".1">Spiderman</button>
-                  <button class="btn button" data-filter=".2">doctor strange</button>
-                  <button class="btn button" data-filter=".3">scarlet witch</button>
-                </div>
+              <div style="display: flex;">
+                <button id="prevprev">&lt;</button>
+                <div id="number"></div>
+                <button id="nextnext">&gt;</button>
               </div>
-              <div style="clear: both"></div>
-              <div id="grid" class="grid text-center">
 
+                <div id="container_box">
 
-                <div class="grid-item 3">
-                  <img alt="" src="images/porfolio-2.jpg" />
-                  <div class="grid_hover_area text-center">
-                    <div class="girid_hover_text m-top-180">
-                      <h4 class="text-white">Your Work Title</h4>
-                      <p class="text-white">- Business Card, Branding</p>
-                      <a href="images/porfolio-2.jpg" class="btn btn-primary popup-img">View Project</a>
-                    </div>
-                  </div>
-                  <!-- End off grid Hover area -->
                 </div>
 
 
 
-                <!-- End off grid item -->
-              </div>
+
               <div style="height: 700px;"></div>
             </div>
           </div>

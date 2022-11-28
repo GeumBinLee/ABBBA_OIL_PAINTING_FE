@@ -25,7 +25,8 @@ window.onload = () => {
 
 
 
-const exampleImage = ["https://media.istockphoto.com/id/487474326/vector/low-polygon-llion-geometric-pattern-explode-vector-illustratio.jpg?s=612x612&w=0&k=20&c=RgB7yFaqxS1Rp7_vV0_4QGpyQbJ5TqXvoTvjAo--9Vw=","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqTgeaO4-nl32GMEPrZ5k4XJXR2YugnX6jw&usqp=CAU","https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTBfMTI5/MDAxNTc1OTQ2Nzc1OTIy.ItplAsigh5YToRGRCStcVIDqYKYSHncaWFUYu58BIr0g.tGzqWl-PWpmGkqCuMBAUgEBc2oh_-v1udYhDEx9DjP4g.JPEG.enaeng1/F17-1.JPG?type=w800"]
+const exampleImage = ["https://media.istockphoto.com/id/487474326/vector/low-polygon-llion-geometric-pattern-explode-vector-illustratio.jpg?s=612x612&w=0&k=20&c=RgB7yFaqxS1Rp7_vV0_4QGpyQbJ5TqXvoTvjAo--9Vw=",
+"https://i.pinimg.com/originals/1f/9c/82/1f9c829f64bcc8fbb1158632e89fe819.jpg","https://mblogthumb-phinf.pstatic.net/MjAxOTEyMTBfMTI5/MDAxNTc1OTQ2Nzc1OTIy.ItplAsigh5YToRGRCStcVIDqYKYSHncaWFUYu58BIr0g.tGzqWl-PWpmGkqCuMBAUgEBc2oh_-v1udYhDEx9DjP4g.JPEG.enaeng1/F17-1.JPG?type=w800"]
 const slide = document.querySelector("#slide");
 const second_slide = document.querySelector("#second_slide");
 const imgList = ["https://c4.wallpaperflare.com/wallpaper/924/800/901/spider-man-artwork-ps4-red-wallpaper-preview.jpg",

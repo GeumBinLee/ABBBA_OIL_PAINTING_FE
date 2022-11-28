@@ -1,3 +1,4 @@
+
 "use strict";
 jQuery(document).ready(function ($) {
   //for Preloader
@@ -39,16 +40,7 @@ jQuery(document).ready(function ($) {
       }
     });
 
-  /*---------------------------------------------*
-     * WOW
-     ---------------------------------------------*/
 
-  var wow = new WOW({
-    mobile: false, // trigger animations on mobile devices (default is true)
-  });
-  wow.init();
-
-  // magnificPopup
 
   $(".popup-img").magnificPopup({
     type: "image",
@@ -175,10 +167,8 @@ window.addEventListener('DOMContentLoaded', function()
 });
 
 async function GetProfile(){
-  const payload = localStorage.getItem("payload");
-  const payload_parse = JSON.parse(payload);
  
-  const response = await fetch ('http://127.0.0.1:8000/users/profile/',{
+  const response = await fetch ('http://127.0.0.1:8000/users/profile/?page=1',{
       headers : {
           "authorization" : "Bearer " + localStorage.getItem("access")
       },
@@ -186,43 +176,40 @@ async function GetProfile(){
   })
 .then (response=>response.json())
 console.log(response);
+console.log(response.next)
 
-  for(let i = response.results.length -1; i >= 0; i--){
-    let create_at=response.results[i].created_at.slice(0,10)
-    let image_url = "http://127.0.0.1:8000" + response.results[i].painting
 
-    const div_0 =document.getElementById('grid')
-    const div_1= document.createElement(`div`)
-    $(div_1).addClass('grid-item');
-    $(div_1).addClass(`${response.results[i].painter}`)
-    div_0.appendChild(div_1);
-    const image = document.createElement("img");
-    image.alt=""
-    image.src = image_url
-    div_1.appendChild(image);
-    const div_2 = document.createElement("div");
-    $(div_2).addClass('grid_hover_area');
-    $(div_2).addClass(`text-center`);
-    div_1.appendChild(div_2);
-    const div_3 = document.createElement("div");
-    $(div_3).addClass('girid_hover_text');
-    $(div_3).addClass(`m-top-50`);
-    div_2.appendChild(div_3);
-    const h4 =  document.createElement("h4");
-    $(h4).addClass('text-white');
-    h4.innerText=`${response.results[i].painter}`
-    div_3.appendChild(h4);
-    const p =  document.createElement("p");
-    $(p).addClass('text-white');
-    p.innerText=create_at
-    div_3.appendChild(p);
-    const a =  document.createElement("a");
-    a.href = "images/porfolio-2.jpg"
-    $(a).addClass('btn');
-    $(a).addClass(`btn-primary`);
-    $(a).addClass('popup-img');
-    a.innerText="다운로드";
-    div_3.appendChild(a);
+const prevprev = document.getElementById("prevprev")
+const nextnext = document.getElementById("nextnext")
+prevprev.onclick = `location.href=${response.previous}`
+nextnext.onclick = `location.href=${response.next}`
+
+response.results.forEach(element => {
+  console.log(response)
+
+  const div_box = document.querySelector("#container_box")
+
+  const image = document.createElement("img")
+  image.src = "http://127.0.0.1:8000"+element.painting
+  div_box.appendChild(image)
+
+
+
+
+  // all.onclick = function () {
+  //   const image = document.createElement("img")
+  //   image.src = "http://127.0.0.1:8000"+element.painting
+  //   div_box.appendChild(image)
+  // }
+  
+})
+
+
+
+
+  // for(let i = response.results.length -1; i >= 0; i--){
+    
+    
   
     // const abc = document.querySelector("#abc")
     // abc.src = image_url
@@ -246,7 +233,7 @@ console.log(response);
   // feed.appendChild(Div)
   // }
   
-}
+// }
 
 function handleLogout() {
   localStorage.removeItem("access");

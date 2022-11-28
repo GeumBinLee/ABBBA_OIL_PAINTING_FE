@@ -1,3 +1,46 @@
+
+.head-title{
+  width : 100%;
+}
+#container_box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 25%));
+  grid-template-rows: repeat(4, 1fr);
+  width: 65%;
+  height: 100vh;
+  margin: auto;
+  grid-area: main;
+  grid-template-areas:
+    "main main main main"
+    ". . ."
+    ". footer footer footer .";
+}
+#container_box>img:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#container_box>img:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#container_box>img:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+#container_box>img:nth-child(4) {
+  grid-column: 4/5;
+  grid-row: 1/2;}
+
+#container_box>img{
+  width : 25%;
+  height: 25%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
 *,
 *::after,
 *::before {
@@ -105,7 +148,7 @@ a:focus {
 
 /* two seats on each side for free space */
 
-.container {
+.container_box {
   position: relative;
   overflow: hidden;
   width: 100vw;
