@@ -82,23 +82,6 @@ function to_profile() {
     location.href = "profile.html"
 }
 
-//function download() {
-
-//}
-
-//download = document.getElementById("download")
-//download.onclick = function () {
-//    // fetch(`http://127.0.0.1:8000/painters/download/${painting.id}`,{
-//    response = fetch("http://127.0.0.1:8000/painters/download/2", {
-//        headers: {
-//            "authorization": "Bearer " + localStorage.getItem("access")
-//        },
-//        method: 'GET'
-//    })
-//        .then(response => response.json())
-//    console.log(response)
-//    alert("다운 완료!")
-//}
 
 convert = document.querySelector(".convert")
 convert.onclick = async function(){

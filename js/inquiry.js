@@ -10,7 +10,6 @@ function to_inquiry_detail(id) {
 async function handleinquiries(){
     const payload = localStorage.getItem("payload");
     const payload_parse = JSON.parse(payload)
-    const user_id = payload_parse.user_id
    
     const response = await fetch ('http://127.0.0.1:8000/inquiries/',{
         headers : {
@@ -57,7 +56,7 @@ async function inquirypost() {
     const content = document.getElementById("content").value
     const title = document.getElementById("title").value
 
-    const response = await fetch('http://127.0.0.1:8000/inquiries/',{
+    await fetch('http://127.0.0.1:8000/inquiries/',{
         headers:{
             'content-type':'application/json',
             "authorization" : "Bearer " + localStorage.getItem("access")

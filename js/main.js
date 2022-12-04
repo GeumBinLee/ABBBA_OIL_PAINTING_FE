@@ -1,17 +1,7 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
+
 (function (window) {
   "use strict";
 
-  // From https://davidwalsh.name/javascript-debounce-function.
   function debounce(func, wait, immediate) {
     var timeout;
     return function () {
@@ -28,7 +18,6 @@
     };
   }
 
-  // from http://www.quirksmode.org/js/events_properties.html#position
   function getMousePos(e) {
     var posx = 0;
     var posy = 0;
