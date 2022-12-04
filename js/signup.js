@@ -40,8 +40,7 @@ async function handleSignup() {
 async function handleLogin() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  const Alert = document.getElementById("alert");
-  const response = await fetch("http://127.0.0.1:8000/users/api/token/", {
+  await fetch("http://127.0.0.1:8000/users/api/token/", {
     headers: {
       "content-type": "application/json",
     },

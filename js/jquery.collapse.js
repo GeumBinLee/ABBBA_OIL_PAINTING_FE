@@ -1,13 +1,3 @@
-/*
- * Collapse plugin for jQuery
- * --
- * source: http://github.com/danielstocks/jQuery-Collapse/
- * site: http://webcloud.se/jQuery-Collapse
- *
- * @author Daniel Stocks (http://webcloud.se)
- * Copyright 2013, Daniel Stocks
- * Released under the MIT, BSD, and GPL Licenses.
- */
 
 (function($) {
 
@@ -25,16 +15,12 @@
       db : options.persist ? jQueryCollapseStorage(el.get(0).id) : false
     });
 
-    // Figure out what sections are open if storage is used
     _this.states = _this.db ? _this.db.read() : [];
 
-    // For every pair of elements in given
-    // element, create a section
     _this.$el.find(query).each(function() {
       new jQueryCollapseSection($(this), _this);
     });
 
-    // Capute ALL the clicks!
     (function(scope) {
       _this.$el.on("click", "[data-collapse-summary] " + (scope.options.clickQuery || ""),
         $.proxy(_this.handleClick, scope));
@@ -96,7 +82,7 @@
     });
     parent.sections.push(this);
 
-    // Check current state of section
+
     var state = parent.states[this._index()];
 
     if(state === 0) {
@@ -148,7 +134,6 @@
     }
   };
 
-  // Expose in jQuery API
   $.fn.extend({
     collapse: function(options, scan) {
       var nodes = (scan) ? $("body").find("[data-collapse]") : $(this);
@@ -163,13 +148,10 @@
     }
   });
 
-  //jQuery DOM Ready
   $(function() {
     $.fn.collapse(false, true);
   });
 
-  // Expose constructor to
-  // global namespace
   jQueryCollapse = Collapse;
   jQueryCollapseSection = Section;
 
